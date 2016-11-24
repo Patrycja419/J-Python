@@ -1,0 +1,30 @@
+gotowe:
+Time
+Franc 
+Piont 
+
+
+W skład katalogu wchodzi:
+zadanie 6.1
+  times.py
+  times_test.py
+
+zadanie 6.2
+  points.py
+  points_test.py
+  
+zadanie 6.3
+  rectangle.py
+  rectangle_test.py
+ 
+zadanie 6.4
+  triangles.py
+  triangles_test.py
+  
+zadanie 6.5
+  franc.py
+  franc_tes.py
+  
+zadanie 6.6
+  polys.py
+  polys_test.py
