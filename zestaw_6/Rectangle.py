@@ -37,7 +37,7 @@ box.corner.y = 0.0
 	rect.width = w
 	rect.height = h
 	rect.corner = Point()
-    set_point(rect.corner, x, y)
+	set_point(rect.corner, x, y)
 
     def center(rect):         # zwraca środek prostokąta
 	x = rect.corner.x + rect.width/2.0
