@@ -1,10 +1,10 @@
 # Kod testujący moduł.
 #!/usr/bin/python
-
+# -*- coding: utf-8 -*-
 from points import Point
 
 class Point:
-    "
+   
     pass
 
 class Rectangle:
