@@ -1,4 +1,7 @@
-#W pliku polys.py zdefiniować klasę Poly wraz z potrzebnymi metodami. Wielomian będzie reprezentowany przez listę swoich współczynników, [a0, a1, a2] dla a0 + a1 * x + a2 * x * x. Wielomiany mogą mieć dowolnie wysoki stopień. Napisać kod testujący moduł polys.
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from math import sqrt
 
 class Poly:
     """Klasa reprezentująca wielomiany."""
@@ -12,18 +15,32 @@ class Poly:
     def __str__(self):
         return str(self.a)
 
-    def __add__(self, other): pass  # poly1 + poly2
+    def __add__(self, other):   # poly1 + poly2
+        return Poly(self.poly1 + other.poly2)
 
-    def __sub__(self, other): pass  # poly1 - poly2
+    def __sub__(self, other):   # poly1 - poly2
+        return Poly(self.poly1 - other.poly2)
 
-    def __mul__(self, other): pass  # poly1 * poly2
+    def __mul__(self, other):   # poly1 * poly2
+        return Poly(self.poly1 * other.poly2)
 
     def __pos__(self): pass         # +poly1 = (+1)*poly1
-
-    def __neg__(self): pass         # -poly1 = (-1)*poly1
-
-    def __eq__(self, other): pass   # obsługa poly1 == poly2
-
+    if self.(+poly1)==self.(+1)*poly1
+            return True
+        else:
+            return False
+    def __neg__(self): # -poly1 = (-1)*poly1
+    if self.(-poly1)==self.(-1)*poly1
+            return True
+        else:
+            return False
+    def __eq__(self, other):   # obsługa poly1 == poly2 
+    sub = self-other
+        if sub.x == 0: # self = other
+            return True
+        else:
+            return False
+    
     def __ne__(self, other):        # obsługa poly1 != poly2
         return not self == other
 
@@ -33,8 +50,9 @@ class Poly:
 
     def __pow__(self, n): pass      # poly(x)**n lub pow(poly(x),n)
 
-    def diff(self): pass            # różniczkowanie
-
+    def diff(self):             # różniczkowanie
+    return Poly(self.(a+n) - self.(n))/a
+    
     def integrate(self): pass       # całkowanie
 
     def is_zero(self): pass         # bool, True dla [0], [0, 0],...
