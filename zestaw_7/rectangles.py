@@ -23,12 +23,12 @@ class Rectangle:
         return not self == other
 
     def center(rect):           # zwraca środek prostokąta
-        x = rect.corner.x + rect.width/2.0
-        y = rect.corner.y + rect.height/2.0
+        x = rect.center.x + rect.width/2.0
+        y = rect.ccenter.y + rect.height/2.0
         center = Point()
         set_point(center, x, y)
         return center
-    def area(srect):            # pole powierzchni
+    def area(rect):            # pole powierzchni
         return rect.width * rect.height
         def move(rect, x, y): 
     
