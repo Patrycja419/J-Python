@@ -10,7 +10,7 @@ class TestCircles(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "promień ujemny"):
             Circle(1,1, -1)
         with self.assertRaisesRegex(ValueError, "niepoprawny typ"):
-            Circle(1,1, "lubię placki")
+            Circle(1,1, "circle")
             
     def test_eq_circles(self):
         self.assertTrue(Circle(1, 2, 5)==Circle(1, 2, 5))
@@ -21,7 +21,7 @@ class TestCircles(unittest.TestCase):
         self.assertFalse(Circle(1, 5)==Circle(5, 1))
         self.assertTrue(Circle(1, 5)==Circle(1, 5))
         with self.assertRaisesRegex(ValueError, "niepoprawny typ"):
-            Circle(1, 5)=="lubię placki"
+            Circle(1, 5)=="circle"
         
     def test_ne_circles(self):
         self.assertFalse(Circle(1,2)!=Circle(1,2))
@@ -30,7 +30,7 @@ class TestCircles(unittest.TestCase):
         self.assertTrue(Circle(11.13,23.33)!=Circle(11.13,23.32))
         self.assertTrue(Circle(1,5)!=Circle(5,1))
         with self.assertRaisesRegex(ValueError, "niepoprawny typ"):
-            Circle(1, 5)=="nie lubię placków"
+            Circle(1, 5)=="circle"
 
     def test_area_circles(self):
         self.assertEqual(Circle(1,1,1).area(), pi)
@@ -42,7 +42,7 @@ class TestCircles(unittest.TestCase):
         self.assertEqual(Circle(1,1).move(0,0), Circle(1,1))
         self.assertEqual(Circle(1,1).move(1,2), Circle(2,3))
         with self.assertRaisesRegex(ValueError, "niepoprawny typ"):
-            Circle(1, 5).move("koordynaty placka",1)
+            Circle(1, 5).move("",1)
         
     def test_cover_circles(self): # funkcja znajduje najmniejszy okrąg, który pokrywa oba okręgi, więc możemy sprawdzić precyzyjne wyniki
         self.assertEqual(Circle(1,1,1).cover(Circle(3,1,1)), Circle(2,1,2))
@@ -51,7 +51,7 @@ class TestCircles(unittest.TestCase):
         self.assertEqual(Circle(4,6,10).cover(Circle(4,1,5)), Circle(4,6,10))
         self.assertEqual(Circle(0,0,10).cover(Circle(10,0,10)), Circle(5,0,15))
         with self.assertRaisesRegex(ValueError, "niepoprawny typ"):
-            Circle(0,0,10).cover("pokrycie placka")
+            Circle(0,0,10).cover("")
     
     def tearDown(self): pass
 
