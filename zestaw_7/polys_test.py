@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+
 import unittest
-from fracs import *
+from Polys import *
 
 class TestFractions(unittest.TestCase):
 
