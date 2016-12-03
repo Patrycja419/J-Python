@@ -14,7 +14,7 @@ class TestFractions(unittest.TestCase):
         self.assertTrue(3==Frac(6,2))
         self.assertFalse(Frac(5,2)==3)
         with self.assertRaisesRegex(ValueError, "niepoprawny typ"):
-            Frac(1, 6)=="lubię placki"   
+            Frac(1, 6)=="francs"   
         
     def test_neq_frac(self):
         self.assertTrue(Frac(1,2)!=Frac(1,4))
@@ -55,7 +55,7 @@ class TestFractions(unittest.TestCase):
         self.assertEqual(0.4+Frac(1, 2), Frac(9,10))
         self.assertEqual(2+Frac(1,3), Frac(7, 3))
         with self.assertRaisesRegex(ValueError, "niepoprawny typ"):
-            Frac(12, 4)+"lubię placki"   
+            Frac(12, 4)+"francs"   
 
     def test_sub_frac(self):
         self.assertEqual(Frac(1, 2)-Frac(1, 3), Frac(1, 6))
@@ -66,7 +66,7 @@ class TestFractions(unittest.TestCase):
         self.assertEqual(Frac(12, 30)-Frac(1, 3), Frac(1, 15))
         self.assertEqual(Frac(12, 30)-Frac(1, 3), Frac(1, 15))
         with self.assertRaisesRegex(ValueError, "niepoprawny typ"):
-            Frac(1, 6)-"lubię placki"   
+            Frac(1, 6)-"francs"   
         
     def test_mul_frac(self):
         self.assertEqual(Frac(22, 2)*Frac(1, 12), Frac(11, 12))
@@ -75,7 +75,7 @@ class TestFractions(unittest.TestCase):
         self.assertEqual(Frac(1, 10)*10, Frac(1,1))
         self.assertEqual(10*Frac(1, 6), Frac(5, 3))
         with self.assertRaisesRegex(ValueError, "niepoprawny typ"):
-            Frac(1, 6)*"lubię placki"   
+            Frac(1, 6)*"francs"   
 
     def test_div_frac(self):
         self.assertEqual(Frac(22, 2) / Frac(7, 12), Frac(132, 7))
@@ -84,7 +84,7 @@ class TestFractions(unittest.TestCase):
         self.assertEqual(Frac(12, 30) / 3, Frac(2, 15))
         self.assertEqual(0.5/ 3, Frac(1, 6))
         with self.assertRaisesRegex(ValueError, "niepoprawny typ"):
-            Frac(1, 6)/"lubię placki"   
+            Frac(1, 6)/"francs"   
 
     def test_frac2float(self):
         self.assertEqual(float(Frac(1,2)),0.5)
