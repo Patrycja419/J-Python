@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from circles import *
+from circles import circle *
 from math import pi
 
 class TestCircles(unittest.TestCase):
