@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from francs import *
+from francs import Franc *
 
 class TestFractions(unittest.TestCase):
 
