@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-class Frac:
+class Franc:
     def __init__(self, x=0, y=1):
         if x%1 == 0 and y%1 == 0:
             if y == 0:
@@ -133,7 +133,7 @@ class Frac:
     def __float__(self):                   # konwersja do float
         return float(self.x)/float(self.y)
         
-    def otherToFrac(self,x):
+    def otherToFranc(self,x):
         if isinstance(x, Frac):
             return x
         elif isinstance(x, float) or isinstance(x, int):
