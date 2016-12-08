@@ -56,3 +56,4 @@ class Poly:
     def integrate(self): pass       # całkowanie
 
     def is_zero(self): pass         # bool, True dla [0], [0, 0],...
+

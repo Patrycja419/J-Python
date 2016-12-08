@@ -32,16 +32,15 @@ class Triangle:
     def __ne__(self, other):        # obsługa tr1 != tr2
         return not self == other
 
-    def center(self):           # zwraca środek trójkąta
-    
-        x = self.center.x + self.width/2.0
-	    y = self.center.y + self.height/2.0
-	    center = Point()
+    def center(self):           # zwraca środek trójkąta   
+	x = self.center.x + self.width/2.0
+	y = self.center.y + self.height/2
+	center = Point()
     	set_point(center, x, y)
-	    return center
+	return center
     
     def area(self):             # pole powierzchni
-        return self.width * self.height/2.0
+        return self.width * self.height
     def move(self, x, y):       # przesunięcie o (x, y)
         return self.width+x
         return self.height+y

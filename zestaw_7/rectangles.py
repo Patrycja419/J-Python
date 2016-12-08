@@ -30,14 +30,14 @@ class Rectangle:
         return center
     def area(rect):            # pole powierzchni
         return rect.width * rect.height
-        def move(rect, x, y): 
     
-    def move(rect, x, y):       # przesunięcie o (x, y)
-        return rect.width+x
-        return rect.height+y
+    def move(rect, x, y):  pass     # przesunięcie o (x, y)
+   #     return rect.width+x
+   #    return rect.height+y
 
     def intersection(self, other): pass # część wspólna prostokątów
-        return (self.x1)*(self.x2)=(other.y2)*(other.y2)
+    #   return (self.x1)*(self.x2)=(other.y2)*(other.y2)
     def cover(self, other): pass    # prostąkąt nakrywający oba
         
     def make4(self): pass           # zwraca listę czterech mniejszych
+
