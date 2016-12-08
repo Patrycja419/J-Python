@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from Polys import Poly *
+from polys import Poly
 
 class TestFractions(unittest.TestCase):
 
