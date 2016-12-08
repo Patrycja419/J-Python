@@ -13,20 +13,26 @@ class Circle:
             raise ValueError("promień ujemny")
         self.pt = Point(x, y)
         self.radius = float(radius)
+
     def __repr__(self):       # "Circle(x, y, radius)"
         return "Circle(%s, %s, %s)" % (self.pt.x, self.pt.y, self.radius)
+
     def __eq__(self, other):
         if not isinstance(other, Circle):
             raise ValueError("niepoprawny typ argumentu")
         return self.pt == other.pt and self.radius == other.radius
+
     def __ne__(self, other):
         return not self == other
+
     def area(self):           # pole powierzchni
         return pi*self.radius*self.radius
+
     def move(self, x, y):     # przesuniecie o (x, y)
         if not (isinstance(x, float) or isinstance(x, int)) and (isinstance(y, float) or isinstance(y, int)):
             raise ValueError("niepoprawny typ argumentu")
         return Circle(self.pt.x + x, self.pt.y + y, self.radius)
+
     def cover(self, other):   # okrąg pokrywający oba
         if not isinstance(other, Circle):
             raise ValueError("niepoprawny typ argumentu")
